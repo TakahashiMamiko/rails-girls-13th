@@ -1,8 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Ideas</h1>
+<h1>アイデアの一覧</h1>
 
-<table>
+<div class="ideas-container">
+  <% @ideas.each do |idea| %>
+  <div class="ideas-card">
+    <div class="ideas-card__description"><%= idea.description %></div>
+    <div class="ideas-card__user-name"><%= idea.name %></div>
+    <div class="ideas-card__picture"><%= idea.picture %></div>
+    <div class="ideas-card__menu">
+      <span><%= link_to 'Show', idea %></span>
+      <span><%= link_to 'Edit', edit_idea_path(idea) %></span>
+      <span><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
+<!-- <table>
   <thead>
     <tr>
       <th>Name</th>
@@ -24,7 +40,7 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
 

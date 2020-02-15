@@ -1,3 +1,23 @@
 // Place all the styles related to the ideas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.ideas-container {
+  display:flex;
+}
+
+.ideas-card {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #3b4b5b;
+
+  .ideas-card__description {
+    font-size: 18px;
+  }
+  .ideas-card__user-name {
+    font-size: 10px;
+  }
+  .ideas-card__menu {
+    text-decoration: underline;
+  }
+}
